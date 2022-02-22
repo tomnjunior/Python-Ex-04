@@ -1,0 +1,41 @@
+4 EXERCÍCIO 4
+Considere a tabela a seguir referente a produtos armazenados em um depósito, em que são considerados o estoque atual de cada produto e o estoque mínimo necessário.
+
+Código	Estoque	Mínimo
+1	35	20
+5	75	50
+2	43	45
+3	26	18
+20	35	20
+
+Armazene as informações acima em uma estrutura de lista com dicionário, substituindo a primeira linha com os dados: no campo código coloque o primeiro digito do seu RU, no estoque os dois dígitos seguintes de seu RU, e no campo mínimo os dois últimos dígitos do seu RU.
+Por exemplo, tendo o Registro Único(RU): 123456
+
+Código	Estoque	Mínimo
+1	23	56
+5	75	50
+2	43	45
+3	26	18
+20	35	20
+
+As informações devem ser inseridas no dicionário via teclado. Ao digitar o código 0 (zero), o programa interrompe a leitura e se encerra. Ordene os produtos em ordem crescente de código. Imprima na tela um teste do seu programa usando como primeiro cadastro o primeiro digito do seu RU, como estoque os dois dígitos seguintes de seu RU, e como mínimo os dois últimos dígitos do seu RU.
+Dica: A sua lista deve conter o dicionário da seguinte forma: 
+
+[{'codigo': 1, 'estoque': 23, 'minimo': 56}, {'codigo': 5, 'estoque': 75, 'minimo': 50}, ..., {'codigo': 20, 'estoque': 35, 'minimo': 20}] 
+
+Para criar dicionário e lista: 
+
+dicionario = { } 
+lista =[ ] 
+
+Para ordenar: utilize o método sorted, ordenando pela chave codigo.
+
+listaOrdenada = sorted(lista, key=itemgetter('codigo')) 
+
+Não se esqueça de importar o itemgetter no início do seu programa. 
+
+from operator import itemgetter 
+
+Ou utilize o lambda: 
+
+listaOrdenada = sorted(lista, key=lambda item: item['codigo'])
